@@ -3,11 +3,14 @@
     padding: 0;
     margin: 0;
     overflow: hidden;
-    display: flex;
   }
   .menu li {
     float: left;
-  }
+  } 
+  .menu li {
+    float: left;
+    display: flex;
+  } 
   .menu li a {
     color: white;
     text-align: center;
