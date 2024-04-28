@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>privet</title>
+    <style>
+        .file-card {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: #d4d0d0; /* Светлый цвет карточек */
+            width: 30%; /* Карточка будет занимать всю доступную ширину */
+            max-width: 300px; /* Максимальная ширина карточки */
+            margin: 1rem auto; /* Отступы и центрирование карточки */
+        }
+        
+        .file-title {
+            color: #333; /* Черный цвет заголовков */
+            text-decoration: none; /* Убираем подчеркивание у ссылок */
+        }
+        
+        .file-title:hover {
+            color: #000; /* Черный цвет при наведении */
+        }
+    </style>
 </head>
 <body>
-    
-    <a href="/">Назад</a>
+  {% for file_name  in list_files %}
+     <div class="file-card">
+        <a class="file-title" href="/file/{{ file_name }}">{{ file_name }}</a>
+     </div>
+  {% endfor %}
+  <a href="/">Назад</a>
 </body>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 20px; /* Отступы вокруг содержимого */
+            border: 1px solid #ccc; /* Светлая граница вокруг контейнера */
+            border-radius: 5px; /* Скругление углов */
+            background-color: #fefefe; /* Светлый фон для контейнера */
+            width: 100%; /* Карточка будет занимать всю доступную ширину */
+            max-width: 300px; /* Максимальная ширина карточки */
+            margin: 0 auto; /* Центрирование карточки */
+        }
+        
+        h1 {
+            color: #333; /* Черный цвет заголовка */
+        }
+        
+        p {
+            color: #555; /* Серый цвет текста параграфа */
+        }
+        
+        a {
+            color: #333; /* Черный цвет ссылок */
+            text-decoration: none; /* Убираем подчеркивание у ссылок */
+        }
+        
+        a:hover {
+            color: #000; /* Черный цвет при наведении */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{file_name}}</h1>
+        <p>{{file_context}}</p>
+    </div>
+</body>
+<a href="/news">Все файлы</a>
+</html>
