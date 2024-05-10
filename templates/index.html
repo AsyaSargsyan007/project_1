@@ -4,28 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Меню</title>
+<style>
+/* Стили для меню */
+.menu {
+  display: flex; /* Делаем меню горизонтальным */
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем внутренние отступы */
+}
 
+.menu li {
+  margin-right: 20px; /* Отступ справа между пунктами меню */
+}
+
+.menu a {
+  text-decoration: none; /* Убираем подчеркивание ссылок */
+  color: #000; /* Цвет текста ссылок */
+  font-weight: bold; /* Жирный шрифт для ссылок */
+}
+
+/* Стили для формы */
+form {
+  max-width: 400px; /* Максимальная ширина формы */
+  margin: auto; /* Центрируем форму */
+}
+
+input[type="text"], input[type="submit"] {
+  width: 100%; /* Занимает всю ширину родительского элемента */
+  box-sizing: border-box; /* Включает padding и border в общую ширину */
+  padding: 10px; /* Отступы внутри поля ввода */
+  margin-bottom: 10px; /* Нижний отступ между полями ввода */
+  border: 1px solid #ccc; /* Граница поля ввода */
+  outline: none; /* Убираем выделение при фокусе */
+}
+
+input[type="submit"] {
+  background-color: #4CAF50; /* Цвет фона кнопки */
+  color: white; /* Цвет текста кнопки */
+  cursor: pointer; /* Курсор в виде руки */
+}
+</style>
 </head>
 <body>
+
 <header>
-     <link rel="'stylesheet" href="{{ url_for('static', filename='custom.css')}}">
-
-     <ul class="menu">
-        <li><a href="/contacts">Контакты</a></li>
-        <li><a href="/about">О нас</a></li>
-        <li><a href="/news">Новости</a></li>
-      </ul>
-
+  <!-- Ваше меню -->
+  <ul class="menu">
+    <li><a href="/contacts">Контакты</a></li>
+    <li><a href="/about">О нас</a></li>
+    <li><a href="/news">Новости</a></li>
+  </ul>
 </header>
- 
- <h1>Поделитесь новостью</h1>
 
-    <form action="/create" method="post">
-        <input name="file_name" type="text" placeholder="Название">
-        <input name="file_context" type="text" placeholder="Контекст">
-        <input name="file_date" type="text" placeholder="Дата">
-        <input type="submit" value="Отправить">
-    </form>
+<h1 style="text-align: center;">Поделитесь новостью</h1>
+
+<!-- Ваша форма -->
+<form action="/create" method="post">
+  <input name="file_name" type="text" placeholder="Название">
+  <input name="file_context" type="text" placeholder="Контекст">
+  <input name="file_date" type="text" placeholder="Дата">
+  <input type="submit" value="Отправить">
+</form>
 
 </body>
 </html>

@@ -42,7 +42,7 @@ def statement():
         your_name = request.form.get('your_name')
         your_number = request.form.get('your_number')
         your_mail = request.form.get('your_mail')
-        fw = open(your_name, 'w')
+        fw = open(f'./application/{your_name}', 'w')
         fw.write(your_number)
         fw.write(your_mail)
         fw.close()
